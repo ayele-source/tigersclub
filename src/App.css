@@ -40,3 +40,40 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ===== ADD THIS CODE BELOW ===== */
+/* Image Hover Effects */
+.img-hover-zoom {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+.img-hover-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-hover-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: transform 0.8s;
+  pointer-events: none;
+}
+
+.img-hover-shine:hover::after {
+  transform: translateX(800px) rotate(30deg);
+}

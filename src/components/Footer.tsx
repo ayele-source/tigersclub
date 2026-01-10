@@ -120,11 +120,14 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom Bar - UPDATED WITH ETHIOAPP CREDIT */}
       <div className="border-t border-gold/20">
         <div className="heritage-container py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-cream/60 text-sm">
-            <p>© {currentYear} ETAF Officers Club. All rights reserved.</p>
+            <div className="text-center md:text-left">
+              <p>© {currentYear} ETAF Officers Club. All rights reserved.</p>
+              <p className="mt-1 text-gold/80">Made by Ethioapp, Ethiopia 🇪🇹</p>
+            </div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>

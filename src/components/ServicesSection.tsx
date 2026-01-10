@@ -23,7 +23,7 @@ const ServicesSection = () => {
     },
     {
       icon: Wine,
-      title: "Heritage Bar & Lounge",
+      title: "Our Bar & Lounge",
       description: "Unwind in our sophisticated bar featuring Ethiopian wines, craft cocktails, and live traditional music on weekends.",
       features: ["Ethiopian Wines", "Craft Cocktails", "Live Music", "Lounge Area"],
       image: barImage,

@@ -2,14 +2,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import etafLogo from "@/assets/etaf-logo.png"; // Ethiopian Air Force official logo
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#about", label: "Our Story" },
+    { href: "#about", label: "Our Heritage" },
     { href: "#services", label: "Services" },
-    { href: "#rooms", label: "Rooms" },
+    { href: "#gallery", label: "Gallery" }, // Changed from "Rooms" to "Gallery"
     { href: "#amenities", label: "Amenities" },
     { href: "#location", label: "Location" },
     { href: "#contact", label: "Contact" },
@@ -19,12 +20,28 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-sky-dark/95 backdrop-blur-sm border-b border-gold/20">
       <div className="heritage-container">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo Section - Updated for mobile visibility */}
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="ETAF Officers Club Logo" className="h-14 w-auto" />
-            <div className="hidden sm:block">
-              <h1 className="font-display text-cream text-lg font-semibold">ETAF Officers Club</h1>
-              <p className="text-gold-light text-xs tracking-widest uppercase">Est. 1965</p>
+            {/* Ethiopian Air Force Logo & Text (Visible on mobile) */}
+            <div className="sm:hidden flex items-center gap-2">
+              <img 
+                src={etafLogo} 
+                alt="Ethiopian Air Force Logo" 
+                className="h-10 w-auto"
+              />
+              <div>
+                <p className="text-cream text-xs font-bold">Ethiopian</p>
+                <p className="text-cream text-xs font-bold">Air Force</p>
+              </div>
+            </div>
+            
+            {/* Main Logo (Hidden on mobile, visible on desktop) */}
+            <div className="hidden sm:flex items-center gap-3">
+              <img src={logo} alt="ETAF Officers Club Logo" className="h-14 w-auto" />
+              <div>
+                <h1 className="font-display text-cream text-lg font-semibold">ETAF Officers Club</h1>
+                <p className="text-gold-light text-xs tracking-widest uppercase">Est. 1965</p>
+              </div>
             </div>
           </a>
 

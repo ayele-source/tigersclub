@@ -6,7 +6,7 @@ import { Maximize2 } from "lucide-react";
 
 const GallerySection = () => {
   const galleryImages = [
-    { src: bar2, alt: "Heritage Bar elegant interior", title: "Bar Lounge" },
+    { src: bar2, alt: "Our Bar elegant interior", title: "Bar Lounge" },
     { src: bar3, alt: "Bar seating area with ambient lighting", title: "Evening Ambiance" },
     { src: hall2, alt: "Conference hall professional setup", title: "Conference Hall" },
     { src: hall3, alt: "Event hall spacious layout", title: "Event Space" },

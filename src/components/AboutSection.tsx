@@ -1,4 +1,5 @@
 import historicalImage from "@/assets/historical.jpg";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   return (
@@ -28,25 +29,28 @@ const AboutSection = () => {
               </p>
               <p className="heritage-body text-sky-dark/90">
                 Today, we continue our legacy of exceptional service, blending traditional 
-                Ethiopian warmth with world-class hospitality standards. Our dedicated team, 
-                many of whom represent second and third generations of club families, 
-                ensure every guest experiences the genuine spirit of our heritage.
+                Ethiopian warmth with world-class hospitality standards. 
               </p>
             </div>
           </div>
 
-          {/* Image */}
-          <div className="order-1 lg:order-2 relative">
-            <div className="relative">
+          {/* Image with Hover Effects and Button - SIMPLIFIED */}
+          <div className="order-1 lg:order-2 space-y-8">
+            <div className="group relative overflow-hidden rounded-lg shadow-elevated">
               <img
                 src={historicalImage}
                 alt="Historical photo of ETAF Officers Club opening in 1965"
-                className="rounded-lg shadow-elevated w-full"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute -bottom-6 -left-6 bg-sky-dark text-cream p-6 rounded-lg shadow-elevated animate-float">
-                <span className="font-display text-3xl font-bold text-gold">1965</span>
-                <p className="text-cream/80 text-sm mt-1">Year Established</p>
-              </div>
+              {/* Simple overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+            
+            {/* Learn More Button */}
+            <div className="flex justify-center lg:justify-start">
+              <Button variant="gold" size="lg">
+                Learn More
+              </Button>
             </div>
           </div>
         </div>

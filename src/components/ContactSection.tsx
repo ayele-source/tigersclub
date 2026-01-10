@@ -6,13 +6,13 @@ const ContactSection = () => {
     {
       icon: Phone,
       title: "Phone",
-      value: "+251 114 123 456",
+      value: "+251 911474246",
       description: "Available 24/7",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "info@bishoftuheritage.com",
+      value: "info@etafoffclub.com",
       description: "Quick response within 24 hours",
     },
     {
@@ -99,7 +99,7 @@ const ContactSection = () => {
                 <input
                   type="email"
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-all"
-                  placeholder="john@example.com"
+                  placeholder="dereje@example.com"
                 />
               </div>
 

@@ -5,9 +5,8 @@ import heroImage from "@/assets/hero-hotel.jpg";
 import hero2 from "@/assets/hero2.jpg";
 import hero3 from "@/assets/hero3.jpg";
 import hero4 from "@/assets/hero4.jpg";
-import etafLogo from "@/assets/etaf-logo.png"; // Ethiopian Air Force official logo
 
-const HeroSection = () => {
+const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -66,8 +65,7 @@ const HeroSection = () => {
             />
           </div>
         ))}
-        {/* LIGHTER GRADIENT OVERLAY - Changed from heavy dark to subtle */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-sky-dark/70 via-sky-dark/50 to-sky-dark/80" />
       </div>
 
       {/* Navigation Arrows */}
@@ -88,31 +86,14 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 heritage-container text-center py-32 mt-20">
-        {/* Ethiopian Air Force Branding */}
-        <div className="flex flex-col items-center justify-center mb-6 animate-fade-up">
-          <div className="flex items-center gap-3 mb-3">
-            <img 
-              src={etafLogo} 
-              alt="Ethiopian Air Force Official Logo" 
-              className="h-12 w-auto"
-            />
-            <div className="text-left">
-              <h2 className="font-display text-xl md:text-2xl text-cream font-bold">
-                Ethiopian Air Force
-              </h2>
-              <p className="text-gold-light text-sm">Unmatched Power in the Sky</p>
-            </div>
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full px-4 py-2 mb-8 animate-fade-up">
+          <div className="flex gap-1">
+            {[...Array(3)].map((_, i) => (
+              <Star key={i} size={14} className="fill-gold text-gold" />
+            ))}
           </div>
-          
-          {/* 60 Years Badge */}
-          <div className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full px-4 py-2">
-            <div className="flex gap-1">
-              {[...Array(3)].map((_, i) => (
-                <Star key={i} size={12} className="fill-gold text-gold" />
-              ))}
-            </div>
-            <span className="text-gold-light text-xs font-medium">90 Years of Excellence</span>
-          </div>
+          <span className="text-gold-light text-sm font-medium">60 Years of Excellence</span>
         </div>
 
         {/* Main Heading */}
@@ -173,4 +154,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroCarousel;

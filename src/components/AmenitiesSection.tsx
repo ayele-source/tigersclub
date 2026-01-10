@@ -51,14 +51,14 @@ const AmenitiesSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div>
-            <span className="text-gold font-medium tracking-widest uppercase text-sm">Recreation & Leisure</span>
+            <span className="text-sky-light font-medium tracking-widest uppercase text-sm">Recreation & Leisure</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-sky-light mt-4 mb-6">
               Unwind in
               <span className="text-gold block">Paradise</span>
             </h2>
             <div className="w-20 h-0.5 bg-gradient-to-r from-gold to-gold-light my-6" />
             
-            <p className="text-cream/80 text-lg leading-relaxed mb-10">
+            <p className="text-sky-light/90 text-lg leading-relaxed mb-10">
               Beyond comfortable accommodations, we offer a range of premium recreational facilities 
               designed to help you relax, recharge, and create lasting memories.
             </p>
@@ -103,18 +103,18 @@ const AmenitiesSection = () => {
             </div>
           </div>
 
-          {/* Main Pool Image */}
-          <div className="relative">
+          {/* Main Pool Image with Additional Content */}
+          <div className="space-y-8">
             <div className="relative overflow-hidden rounded-lg shadow-elevated group">
               <img
                 src={poolImage}
-                alt="Hotel swimming pool at sunset"
-                className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="swimming pool at sunset"
+                className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               {/* Reflective Water Effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               
-              {/* FIXED: Position inside image */}
+              {/* Open Daily Badge */}
               <div className="absolute bottom-4 right-4 bg-gold text-forest-dark p-4 rounded-lg shadow-elevated hidden md:block animate-pulse-slow">
                 <span className="font-display text-xl font-bold">Open Daily</span>
                 <p className="text-forest-dark/80 text-sm mt-1">6:00 AM - 10:00 PM</p>
@@ -126,6 +126,27 @@ const AmenitiesSection = () => {
                 <div className="absolute bottom-2 left-2/4 w-3 h-3 bg-cream/40 rounded-full animate-ping" style={{ animationDelay: '0.2s' }} />
                 <div className="absolute bottom-4 left-3/4 w-1 h-1 bg-cream/60 rounded-full animate-ping" style={{ animationDelay: '0.4s' }} />
               </div>
+            </div>
+
+            {/* Additional Text and Button - CORRECTED COLORS */}
+            <div className="bg-sky-light/20 backdrop-blur-sm border border-gold/30 rounded-xl p-6">
+              <h3 className="font-display text-xl font-semibold text-sky-dark mb-4">
+                Premium Recreational Experience
+              </h3>
+              <p className="text-sky-light mb-4">
+                Our amenities are designed with your ultimate comfort in mind. Whether you're 
+                seeking active recreation or peaceful relaxation, our facilities provide the 
+                perfect setting. All amenities are complimentary for our guests throughout 
+                your stay.
+              </p>
+              <p className="text-sky-light mb-6">
+                From sunrise yoga by the pool to evening tennis matches under the stars, 
+                every moment at ETAF Officers Club is an opportunity to create cherished memories.
+              </p>
+              
+              <button className="w-full bg-gold text-sky-dark font-semibold py-3 px-6 rounded-lg hover:bg-gold-light transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-gold">
+                Explore All Amenities
+              </button>
             </div>
           </div>
         </div>
